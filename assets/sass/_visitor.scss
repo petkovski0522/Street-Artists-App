@@ -1,0 +1,307 @@
+#visitor {
+    display: none;
+  }
+  .main-section {
+    height: 370px;
+    
+    background-color: #EDD5BB;
+   
+  }
+  
+  .sliders-wrapper {
+    
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    
+    overflow: hidden;
+    padding: 4.2vh 0;
+
+    .slider1,
+    .slider2 {
+      display: flex;
+      width: calc(30vh * 18);
+      perspective: 100px;
+      &:hover {
+        animation-play-state: paused;
+      }
+    }
+    .slider1{
+        animation: slideLeft 50s linear infinite;
+        margin-bottom: 4.9vh;
+    }
+    .slider2{
+        animation: slideRight 50s linear infinite;
+    }
+    .slide{
+        height: 17vh;
+        width: 30vh;
+        perspective: 100px;
+        margin-right: 15px;
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            padding: 0 1.75vh;
+            transition: transform 0.3s ease;
+            filter: drop-shadow(-5px -5px 5px rgba(0, 0, 0, 0.3));
+            cursor: pointer;
+            &:hover{
+                transform: translateZ(20px);
+            }
+        }
+    }
+}
+.slide:last-child {
+  margin-right: 15px;
+}
+@keyframes slideLeft {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-30vh * 9));
+    }
+}
+@keyframes slideRight {
+    0%{
+        transform: translateX(calc(-30vh * 9));
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+.carousel{
+  position: absolute;;
+  height: 257px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  .carousel_button{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: transparent;
+      z-index: 10;
+      padding: 0;
+      svg path{
+          transition: stroke 0.3s ease;
+      }
+      svg:hover{
+      path{
+          stroke: #FCEBD5;
+         }
+     }
+  }
+  .carousel_button--left{
+      left: 19px;
+  }
+  .carousel_button--right{
+      right: 19px;
+  }
+  .carousel_slides-wrapper{
+      position: relative;
+      height:  100%;
+      padding: 0;
+      margin: 0;
+      transition: transform 0.25s ease;
+      .carousel_slide{
+          width: 100%;
+          padding: 0 10%;
+          top: 50%;
+          transform: translateY(-50%);
+          position: absolute;
+          transition: opacity 0.5s ease-in;
+          display: flex;
+          .slide_left-part,.slide_right-part{
+              width: 50%;
+              padding: 2.5rem 2rem;
+             
+                  padding: 3rem 1.5rem;
+              
+              .slide_content{
+                  p{
+                      font-family: Roboto;
+                      font-size: 9px;
+                      font-weight: 400;
+                      line-height: 12px;
+                      text-align: center;
+                      
+                          font-size: 12px;
+                          line-height:16px;
+                      
+
+                  }
+              }
+          }
+          .slide_left-part{
+              .slide_content{
+                  background-color: #FCEBD5;
+                  padding: 0.5rem;
+                  position: relative;
+                  img{
+                      height: 46px;
+                      width: 46px;
+                      object-fit: cover;
+                      border: 2px solid #A16A5E;
+                      border-radius: 50%;
+                      position: absolute;
+                      top:-23px;
+                      left:50%;
+                      transform: translateX(-50%);
+                      
+                          top: -30px;
+                          height: 60px;
+                          width: 60px;
+                      
+                    
+                  }
+                  p{
+                      padding-top: 25px;
+                      color:  #F8F8F8;
+                  }
+              }
+          }
+          .slide_right-part{
+              .slide_content{
+                  p{
+                      color: #A16A5E;
+                  }
+              }
+          }
+          .border{
+              position: absolute;
+              left: 50%;
+              transform: translateX(-50%);
+              height: 100%;
+              border-right: 2px solid #A16A5E;
+          }
+      }
+  }
+}
+
+
+  .visitor-header img {
+    max-width: 100px;
+  }
+.visitor-header {
+    height: 65px;
+    background-color: #FCEBD5;
+    color: #A16A5E;
+    display: flex;
+    justify-content: space-between;
+}
+  .visitor-header .visitor-left {
+    display: flex;
+    align-items: center;
+  }
+  .visitor-header img {
+    max-width: 80px; 
+  }
+
+  .visitor-header h1 {
+    font-size: 18px; 
+  }
+  .visitor-icon i {
+    font-size: 24px;
+    color: #333;
+  }
+  .visitor-content {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; 
+    overflow: hidden; 
+  }
+  
+  
+.top-section {
+    height: 140px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #F5E3CB;
+    background-image: url(../img/Bricks.png);
+  }
+  .top-section h2 {
+    color: #A16A5E;
+  }
+  .top-section button {
+    white-space: nowrap;
+    background-color: #A16A5E;
+    color: white;
+  }
+  
+
+.carousel-container {
+  overflow: hidden;
+  width: 100%; 
+  margin: 0 auto;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  animation: rotate 10s linear infinite;
+}
+
+.carousel-item {
+  flex: 0 0 100%;
+  height: 200px;
+  background-color: #EDD5BB;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+.carousel-item img {
+  max-width: 100%; 
+  height: 100%; 
+  object-fit: contain;
+}
+.carousel-container.carousel-container-opposite .carousel-track {
+  animation: rotateOpposite 10s linear infinite;
+}
+
+@keyframes rotate {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  33.33% {
+    transform: translateX(-100%);
+  }
+  66.66% {
+    transform: translateX(-200%);
+  }
+}
+
+@keyframes rotateOpposite {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  33.33% {
+    transform: translateX(100%);
+  }
+  66.66% {
+    transform: translateX(200%);
+  }
+}
+
+  
+  .one {
+    height: 244px;
+    background-color: #FCEBD5;
+    position: relative;
+    
+  }
+  
+
+  .visitor-icon {
+    margin-right: 1rem;
+    margin-top: 15px;
+  }

@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&family=Roboto&display=swap');
+@import url('https://fonts.google.com/specimen/Roboto');
+#landing {
+    display: block; 
+  }
+  
+.landing-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FCEBD5;
+    height: 65px;
+    color: #A16A5E;
+    border-bottom: grey 1px solid;
+}
+
+.landing-header h1 {
+    font-size: 23px;
+    font-family: 'Reenie Beanie', cursive;
+}
+
+.landing-content {
+    height: calc(100vh - 65px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #FCEBD5;
+}
+.logo {
+    max-width: 200px; 
+    margin-top: 10px; 
+    margin-bottom: 30px
+}
+.landing-container {
+    position: relative; 
+}
+
+.rectangle {
+    width: 260px;
+    height: 390px;
+}
+
+.rectangle1 {
+    background-color: #A16A5E;
+   clip-path: polygon(0% 10%, 0% 100%, 130% 100%);
+}
+.rectangle1 h1 {
+    position: absolute;
+    top: 80%; 
+    left: 40%; 
+    transform: translate(-50%, -50%); 
+    margin: 0;
+    padding: 0;
+    color: #FCEBD5;
+    font-size: 40px;
+    font-family: 'Reenie Beanie', cursive;
+    white-space: nowrap;
+    
+}
+ .rectangle2 {
+    background-color: #EDD5BB;
+    position: absolute; 
+    top: 0px; 
+    left: 0px; 
+    clip-path: polygon(0 0%, 100% 0, 100% 79%, 0 11%);
+
+}
+.rectangle2 h1 {
+    position: absolute;
+    top: 16%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    margin: 0;
+    padding: 0;
+    color:#A16A5E;
+    white-space: nowrap;
+    font-size: 40px;
+    font-family: 'Reenie Beanie', cursive;
+}
+#artist-names-dropdown {
+    width: 97px;
+height: 27px;
+    position: absolute;
+    top: 27%; 
+    left: 65%; 
+    transform: translate(-50%, -50%); 
+    margin: 0;
+    padding: 0;
+    color:#A16A5E;
+    border: 1px solid #A16A5E;
+    border-radius: 2px;
+background: none;
+}
+
+
+#landing #joinVisitor:hover,
+#landing .rectangle2:hover {
+  filter: drop-shadow(-1px 5px 23px rgba(0, 0, 0, 0.66));
+}
+
+#landing #joinVisitor:hover,
+#landing .rectangle2:hover {
+  transform: scale(1.1) translate(0px, -5px);
+}
